@@ -1,0 +1,54 @@
+table	column	label	nulltype	datatype	structure	description
+table	table			label	unique	name of this table
+table	path			line		path to the TSV file for this table, relative to the table.tsv file
+table	type		empty	table_type		type of this table, used for tables with special meanings
+table	options		empty	line		VALVE options for this table
+table	description		empty	text		a description of this table
+column	table			label	from(table.table)	the table that this column belongs to
+column	column			label		the name of this column
+column	label		empty	label		the label for this column
+column	nulltype		empty	word	from(datatype.datatype)	the datatype for NULL values in this column
+column	datatype			word	from(datatype.datatype)	the datatype for this column
+column	structure		empty	label		schema information for this column
+column	description		empty	text		a description of this column
+datatype	datatype			word	primary	the name of this datatype
+datatype	parent		empty	word	tree(datatype)	the parent datatype
+datatype	condition		empty	line		the method for testing the datatype
+datatype	description		empty	text		a description of this datatype
+datatype	sql_type		empty	sql_type		the SQLite type for representing this data
+datatype	html_type		empty	html_type		the HTML type for viewing and editing this data
+sponsor	label			label	primary	name of project sponsor
+sponsor_type	label			label	primary	name of project sponsor
+resource_type	label			label	primary	name of project sponsor
+domain	label			label	primary	name of project sponsor
+access_type	label			label	primary	name of project sponsor
+geospatial	submitter_name			label		Last name, First name Middle initial
+geospatial	submitter_name			label		Last name, First name Middle initial
+geospatial	submitter_email			email		
+geospatial	submitter_comment		empty	label		Optional submitter comment
+geospatial	program_name			program		CHORDS
+geospatial	project_GUID		empty	GUID		project ID, fill in only if reusing or updating an existing project, otherwise leave blank
+geospatial	project_name			label		name of project
+geospatial	project_short_name		empty	label		project name abbreviation or short name
+geospatial	project_sponsor			list	from(sponsor.label)	the name of an agency, institution, consortium, or other body that oversees the projects and resources.  For academic programs that center around a lab or individual use the department or consortium name.
+geospatial	project_sponsor_other		empty	list		if does not appear in the CV above
+geospatial	project_sponsor_type			label	from(sponsor_type.label)	type of program
+geospatial	project_url			URL		project website
+geospatial	project_description			label		description of project
+geospatial	resource_GUID		empty	GUID		resource ID, fill in only if updating an existing resource, otherwise leave blank
+geospatial	resource_name			label		name of resource, can be the same as project name
+geospatial	resource_short_name			label		resource name abbreviation or short name
+geospatial	resource_type			label	from(resource_type.label)	type of resource
+geospatial	resource_url			URL		resource website
+geospatial	resource_description			label		description of resource
+geospatial	domain			list	from(domain.label)	subject domain of the resource, broad categories
+geospatial	keywords		empty	list		keywords to describe resource, preferably from MESH
+geospatial	access_type			word	from(access_type.label)	type of resource access (more than one term?)
+geospatial	payment_required			yes_no		indicate whether resource is free or fee based
+geospatial	date_added		empty	datetime		date resource added to catalog
+geospatial	date_updated		empty	datetime		date resource updated to catalog
+geospatial	date_verified		empty	datetime		date resource verified in catalog
+geospatial	resource_reference			label		how to cite this resource, DOI preferred
+geospatial	resource_use_agreement		empty	URL		agreement for use of the resource, include a link or full text or both, don't paraphrase
+geospatial	publications		empty	label		publications describing the resource
+geospatial	is_static			yes_no		yes if the resource is static, no if the resource is expected to be updated in the future

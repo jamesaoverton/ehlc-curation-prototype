@@ -1,0 +1,10 @@
+table	path	type	options	description
+table	src/schema/table.tsv	table		All of the tables in this project.
+column	src/schema/column.tsv	column		Columns for all of the tables.
+datatype	src/schema/datatype.tsv	datatype		Datatypes for all of the columns.
+sponsor	src/schema/sponsor.tsv			Project sponsors.
+sponsor_type	src/schema/sponsor_type.tsv			Project sponsor types.
+resource_type	src/schema/resource_type.tsv			Resource types.
+domain	src/schema/domain.tsv			Resource domains.
+access_type	src/schema/access_type.tsv			Resource access types.
+geospatial	geospatial.tsv			Geospatial datasets.
